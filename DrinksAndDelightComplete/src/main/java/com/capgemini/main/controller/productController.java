@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.capgemini.main.entites.OrderDetails;
+
 import com.capgemini.main.entites.RawSpecs;
 import com.capgemini.main.service.ProductServiceInterface;
 
