@@ -2,19 +2,20 @@ package com.capgemini.main.entites;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-import org.springframework.beans.factory.annotation.Value;
+
 
 @Entity
 @DynamicInsert
-@DynamicUpdate
+@DynamicUpdate	
+@Table(name = "Stock_Details")
 public class StockDetails {
 	
 	@Id
@@ -30,6 +31,28 @@ public class StockDetails {
 	private String qualityCheck;
 	
 	
+
+
+	public StockDetails() {
+		
+	}
+
+
+	public StockDetails(String stockId, String name, String supplierId, double quantityValue, double quantityUnit,
+			double pricePerUnit, String warehouseId, LocalDate manufactureDate, LocalDate expiryDate,
+			String qualityCheck) {
+		super();
+		this.stockId = stockId;
+		this.name = name;
+		this.supplierId = supplierId;
+		this.quantityValue = quantityValue;
+		this.quantityUnit = quantityUnit;
+		this.pricePerUnit = pricePerUnit;
+		this.warehouseId = warehouseId;
+		this.manufactureDate = manufactureDate;
+		this.expiryDate = expiryDate;
+		this.qualityCheck = qualityCheck;
+	}
 
 
 	public String getStockId() {
