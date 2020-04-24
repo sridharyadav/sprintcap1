@@ -2,12 +2,14 @@ package com.capgemini.main.service;
 
 import java.util.List;
 
-import com.capgemini.main.entites.RawSpecs;
+import com.capgemini.main.entites.StockDetails;
 
 public interface ProductServiceInterface {
 	
 	
-	public RawSpecs getProductSpecs(String rmsId);
+	public StockDetails getProductSpecs(String stockId);
+
 	
-	public List<RawSpecs> retrieve();
+	public List<StockDetails> retrieve();
+	
 }
