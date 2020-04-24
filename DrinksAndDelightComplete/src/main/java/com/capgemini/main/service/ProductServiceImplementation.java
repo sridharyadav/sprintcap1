@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.main.dao.ProductDaoInterface;
-import com.capgemini.main.entites.OrderDetails;
-import com.capgemini.main.entites.RawSpecs;
+
+import com.capgemini.main.entites.StockDetails;
 
 
 @Service
@@ -23,20 +23,23 @@ public class ProductServiceImplementation implements ProductServiceInterface{
 
 
 	@Override
-	public RawSpecs getProductSpecs(String rmsId) {
-		return daoObj.getProductSpecs(rmsId);
+	public StockDetails getProductSpecs(String stockId) {
+		return daoObj.getProductSpecs(stockId);
 	}
+	
+	
 
+	
 	@Override
-	public OrderDetails findOrderById(String id) {
-		return daoObj.findOrderById(id);
-	}
-
-	@Override
-	public List<RawSpecs> retrieve() {
+	public List<StockDetails> retrieve() {
 		System.out.println("--");
 		return daoObj.reterive();
 	}
+
+
+
+
+	
 	
 	
 
