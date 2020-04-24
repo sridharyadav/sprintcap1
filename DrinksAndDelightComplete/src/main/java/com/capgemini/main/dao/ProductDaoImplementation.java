@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.capgemini.main.entites.RawSpecs;
+import com.capgemini.main.entites.StockDetails;
 
 
 @Transactional
@@ -26,19 +26,22 @@ public class ProductDaoImplementation implements ProductDaoInterface{
 
 	
 	@Override
-	public RawSpecs getProductSpecs(String rmsId) {
-		return entityManager.find(RawSpecs.class,rmsId);
+	public StockDetails getProductSpecs(String stockId) {
+		return entityManager.find(StockDetails.class,stockId);
 	}
 
 	
 	
 	@Override
-	public List<RawSpecs> reterive() {
-		String Qstr="SELECT product from RawSpecs product";
-		TypedQuery<RawSpecs> query=entityManager.createQuery(Qstr,RawSpecs.class);
+	public List<StockDetails> reterive() {
+		String Qstr=" from StockDetails";
+		TypedQuery<StockDetails> query=entityManager.createQuery(Qstr,StockDetails.class);
 		System.out.println("dao impl");
 		return query.getResultList();
 		}
+
+
+
 	
 
 }
